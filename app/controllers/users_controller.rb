@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+  def new_registration_form
+
+    render({ :template => "users/signup_form.html.erb" })
+  end
+  
   def index
     @users = User.all.order({ :username => :asc })
 
