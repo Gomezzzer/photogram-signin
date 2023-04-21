@@ -22,9 +22,13 @@ class UsersController < ApplicationController
 
     user.username = params.fetch("input_username")
 
-    user.save
+   save_status =  user.save
 
-    redirect_to("/users/#{user.username}")
+    if save_status == true
+      redirect_to("/users/#{user.username}", { :notice => "Welcome", " + user.username + "!"" })
+      else
+      redirect_to("/user_sign_up")
+      end 
   end
 
   def update
