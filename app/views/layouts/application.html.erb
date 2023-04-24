@@ -18,11 +18,30 @@
 
    <nav>
     <ul>
-      <li><a href="user_sign_up">Sign Up</a></li>
+     <li><a href="/user_sign_in">Sign In</a></li>
+      <li><a href="/user_sign_up">Sign Up</a></li>
+      <li><a href="/user_sign_out">Sign out</a></li>
       <li><a href="/users">Users</a></li>
       <li><a href="/photos">Photos</a></li>
+      <li>
+       <%= session.fetch(:user_id)%>
+      </li>
     </ul>
   </nav>
+
+  <% if notice.present? %>
+    <div style="border: thin green solid; color: green">
+      <%= notice %>
+    </div>
+  <% end %>
+
+  <% if alert.present? %>
+    <div style="border: thin red solid; color: red">
+    <%= alert %>  
+    </div>
+  <% end %>
+
+
     <%= yield %>
   </body>
 </html>
