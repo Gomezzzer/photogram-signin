@@ -20,7 +20,9 @@
   <dd>
     2 months ago
   </dd>
-
+  <dd>
+   <% if session.fetch( :user_id) ==  @photo.owner_id %>
+  </dd>
   <dt>Edit photo</dt>
   <dd>
     <form action="/update_photo/<%= @photo.id %>">
@@ -33,7 +35,8 @@
       <button>Update photo</button>
     </form>
   </dd>
-
+  <% end %>
+  
   <dt>Delete photo</dt>
   <dd>
     <a href="/delete_photo/<%= @photo.id %>;">
