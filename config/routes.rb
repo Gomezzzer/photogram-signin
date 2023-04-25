@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   # Photo routes
 
   # CREATE
-  get("/insert_photo_record", { :controller => "photos", :action => "create" })
+   get("/insert_photo_record", { :controller => "photos", :action => "create" })
 
   # READ
   get("/photos", { :controller => "photos", :action => "index"})
@@ -39,15 +39,16 @@ Rails.application.routes.draw do
   get("/update_photo/:the_photo_id", { :controller => "photos", :action => "update" })
 
   # DELETE
-  get("/delete_photo/:the_photo_id", { :controller => "photos", :action => "destroy"})
+  get("/delete_photo/:the_photo_id", { :controller => "photos", :action => "destroy" })
 
   # Comment routes
+
 
   # CREATE
   get("/insert_comment_record", { :controller => "comments", :action => "create" })
 
   # DELETE
 
-  get("/delete_comment/:the_comment_id", { :controller => "comments", :action => "destroy"})
+  get("/delete_comment/:the_comment_id", { :controller => "comments", :action => "destroy" })
 
 end

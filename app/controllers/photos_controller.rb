@@ -39,4 +39,6 @@ class PhotosController < ApplicationController
 
     redirect_to("/photos/#{photo.id}")
   end
+
+  
 end
